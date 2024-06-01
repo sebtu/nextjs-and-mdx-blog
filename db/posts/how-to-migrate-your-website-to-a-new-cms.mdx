@@ -1,0 +1,44 @@
+---
+date: 2024-06-06
+title: How to Migrate Your Website to a New CMS
+description: A step-by-step guide to migrating your website to a new CMS.
+---
+
+## Introduction
+
+Migrating your website to a new CMS can be a complex process. This guide will help you through the steps.
+
+## Preparation
+
+1. **Backup Your Current Site**: Ensure you have a complete backup before starting the migration.
+2. **Choose the New CMS**: Decide which CMS best meets your needs.
+
+## Migration Process
+
+### Export Content
+
+Export your content from the old CMS. This usually involves exporting posts, pages, and media.
+
+### Import Content
+
+Import the content into the new CMS. Most CMS platforms provide tools or plugins to assist with this.
+
+## Example of Exporting Content
+
+### WordPress
+
+```php
+$export_args = array(
+  'content' => 'all',
+);
+wp_export($export_args);
+```
+
+### Joomla
+
+```php
+$articles = ModArticlesLatestHelper::getList($params);
+foreach ($articles as $article) {
+  // Code to export articles
+}
+```

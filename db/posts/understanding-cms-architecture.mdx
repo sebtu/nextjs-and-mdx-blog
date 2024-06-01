@@ -1,0 +1,57 @@
+---
+date: 2024-06-08
+title: Understanding CMS Architecture
+description: An overview of the architecture of popular CMS platforms.
+---
+
+## Introduction
+
+Understanding the architecture of a CMS can help you make better use of its features and customize it effectively. This article provides an overview of the architecture of popular CMS platforms.
+
+## WordPress Architecture
+
+### Core
+
+The WordPress core is the heart of the system, responsible for managing content, users, and settings.
+
+### Themes and Plugins
+
+Themes control the appearance of your site, while plugins add functionality.
+
+### Database
+
+WordPress uses a MySQL database to store content and settings.
+
+## Joomla Architecture
+
+### Framework
+
+Joomla is built on a flexible framework that allows for extensive customization.
+
+### Extensions
+
+Extensions in Joomla include components, modules, and plugins.
+
+### Database
+
+Joomla also uses a MySQL database for content and configuration.
+
+## Example of Database Query
+
+### WordPress
+
+```php
+global $wpdb;
+$results = $wpdb->get_results("SELECT * FROM wp_posts WHERE post_status = 'publish'");
+```
+
+### Joomla
+```php
+$db = JFactory::getDbo();
+$query = $db->getQuery(true)
+            ->select('*')
+            ->from($db->quoteName('#__content'))
+            ->where($db->quoteName('state') . ' = 1');
+$db->setQuery($query);
+$results = $db->loadObjectList();
+```

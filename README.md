@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Simple Blog with Next.js and next-mdx-remote
+
+This project is a simple blog built using `next.js`, `next-mdx-remote`, `gray-matter` and MDX files.
+
+It allows you to write posts in Markdown (MDX) format, including JSX components, and render them as static pages using Next.js' static site generation (SSG) feature.
+
+The project uses Tailwind CSS for styling, ensuring a modern and responsive design, including styling for blog posts rendered from MDX files.
+
+The blog has a straightforward structure with components for layout, dynamic routing for individual posts, and a directory `db` for storing MDX files.
+
+Full description is available [here](https://www.scoped.blog/posts/how-to-create-a-simple-blog-with-nextjs-and-mdx-files)
 
 ## Getting Started
 
-First, run the development server:
+To get started clone the repository then run:
+
+```bash
+npm install
+```
+
+and
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+then open `localhost:3000`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## MDX Files and Queries
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+The MDX files are stored in the `db/posts` folder, and there is a `queries.ts` file that provides functions to read these posts. This setup makes it easy to manage and retrieve blog content programmatically, ensuring that all post-related logic is encapsulated in a single place.
 
-## Learn More
+## App
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The `app` directory contains the main page, a `[slug]` directory for individual blog posts, and a `page/[pageNum]` directory for paginated listings of posts. This structure supports easy navigation and management of blog content.
