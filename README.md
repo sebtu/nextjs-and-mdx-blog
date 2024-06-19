@@ -8,7 +8,10 @@ The project uses Tailwind CSS for styling, ensuring a modern and responsive desi
 
 The blog has a straightforward structure with components for layout, dynamic routing for individual posts, and a directory `db` for storing MDX files.
 
-Full description is available [here](https://www.scoped.blog/posts/how-to-create-a-simple-blog-with-nextjs-and-mdx-files)
+Below is a series of posts describing step by step how this project was created:
+
+1. [How to create a simple blog with Next.js and MDX files](https://scoped.blog/posts/how-to-create-a-simple-blog-with-nextjs-and-mdx-files)
+2. [How to customize MDX components with JSX](https://scoped.blog/posts/how-to-customize-mdx-components-with-jsx)
 
 ## Getting Started
 
